@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PATO</title>
+	<link rel="icon" href="./favicon/favicon.ico">
+    
+
+	<style>
+ 
+
+  @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+
+		body {
+		    background-color: #ffffff;
+            background-size: cover;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			font-size: 70px;
+        
+			color: #000000;
+			margin-top: 15px;
+            font-family: 'Sigmar', cursive;
+		}
+		
+        img {
+			display: block;
+			margin: auto;
+            width: 25%;
+
+		}
+
+		button {
+			background-color: #ffffff;
+			padding: 16px 90px;
+			font-size: 24px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+            
+           
+			
+			
+		
+		}
+		
+		button:hover {
+			background-color: #00ff08;
+		}
+		
+        
+		
+ 
+  
+  #sim {
+    float: left;
+	margin: 35px;
+    margin-top: 2px;
+   
+    
+	
+  }
+  
+  #nao {
+    float: right;
+	margin: 35px;
+    margin-top: 2px;
+      }
+  
+  button:hover {
+    background-color: #eeff00;
+  }
+  
+  #nao:hover {
+    display: none;
+  }
+  
+  #nao.clicked {
+    position: relative;
+    top: 10px;
+  }
+		
+		#mensagem {
+			font-size: 100px;
+			color: #cc2500;
+			margin-top: 2px;
+			display: none;
+			
+		}
+	</style>
+</head>
+<body>
+	<h1>Fica comigo patodavida?</h1>
+    <img src="./img/patofundobranco.gif" alt="">
+    
+	<button id="sim" onclick="exibirMensagem()">Sim</button>
+	<button id="nao">Não</button>
+	<p id="mensagem"> I LOVE YOU QUÁ QUÁ </p>
+	<script>
+		var naoButton = document.getElementById("nao");
+		var simButton = document.getElementById("sim");
+		var mensagem = document.getElementById("mensagem");
+	
+		naoButton.addEventListener("mouseenter", function() {
+			naoButton.style.display = "none";
+		});
+	
+		simButton.addEventListener("click", function() {
+			naoButton.style.display = "none";
+			simButton.style.display = "none";
+			mensagem.style.display = "block";
+		});
+	</script>
+</body>
+</html>
